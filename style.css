@@ -15,7 +15,7 @@
 
 
 
-
+ /* Titles */
 h1{
     font-family: "Intro", Verdana, Tahoma;
 }
@@ -37,6 +37,8 @@ p{
 .promo_items--title
 {color: #FF1233;}
 
+
+ /* Header Menu */
 
 .header{
     background-color: #fff;
