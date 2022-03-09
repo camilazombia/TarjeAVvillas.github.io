@@ -93,7 +93,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
     
     .banner_items--card{
-        width: 120%;
+        width: 100%;
     
     }
     
@@ -207,7 +207,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 443px;
+        width: 100%;
         height: auto;
         transform: rotate(-15deg);
         order: 1;
@@ -242,8 +242,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .steps_item--img{
         position:relative;
         top: -140px;
-        width: 664px;
-        height: 543px;
+        width: 100%;
+        height: auto;
     }
     
     .item_image{
