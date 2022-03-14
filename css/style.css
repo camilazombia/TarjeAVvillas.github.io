@@ -16,207 +16,429 @@
         color: inherit;
    }
 
+   a{
+        font-size: 15px;
+        font-weight: 400;
+        color: #707070;
+   }
 
-h2{
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-h3{
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 800;
-}
+    /*Start Header Menu*/
 
-h4{
-    font-weight: 800;
-}
+    .header{
+        background-color: #fff;
+        padding: 32px 0 64px;
+    }
 
-p{
-    font-size: 15px;
-    font-weight: 400;
-}
+    .header_menu{
+        max-width: 1000px;
+        display: grid;
+	    grid-template-columns: repeat(12, 1fr);
+        grid-gap: 16px;
 
-.title_red {
-    color: #FF1233;
-}
+    }
 
-.menu_links a,
-.promo p
-{
-    color: #707070;
-}
+    .menu_logo{
+        grid-column: 1 / 3;
+    }
 
+    .menu_logo--img{
+        height: 25px;
+    }
 
-h3{
-    padding: 0 0 20px;
-}
+    .menu_elements{
+        grid-column: 3 / 10;
+    }
 
+    .menu_links{
+        width: 100%;
+        justify-content: center;
+    }
+    .menu_links li{
+        display: block;
+    }
 
-
-
-
-
-
-
-.header{
-    background-color: #fff;
-    padding: 2rem 0;
-    position:sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-}
-.header_menu{
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    align-items: center;
-}
-.menu_logo{
-    height: 22px ;
-}
-.menu_elements{
-    color: #707070;
-    font-weight: 400;
-    font-size: 0.8rem;
-    width: 50%;
-}
-
-.menu_links{
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-}
-
-.menu_btn--primary{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: #1F8CFF;
-    color: #fff;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    width: 153px;
-    padding: 7px 14px;
-    box-shadow: 0px 0px 8px 1px #1F8CFF;
-
-}
-
-.menu_btn--icon{
-    height: 10px;
-    width: auto;
-}
-
- /* End Header Menu */
+    .menu_btn{
+        grid-column: 10 / 13;
+    }
 
 
+    .menu_btn--primary{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: #1F8CFF;
+        color: #fff;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        padding: 7px 14px;
+
+        box-shadow: none;
+        transition-property: box-shadow;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+    }
+
+    .menu_btn--primary:hover{
+        box-shadow: 0px 2px 17px 1px #1f8bff65;
+    }
+
+    @media (max-width: 600px) {
+
+        .header{
+            background-color: #fff;
+            padding: 32px 0 0;
+        }
+    
+        .header_menu{
+            max-width: 350px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 16px;
+        }
+
+        .menu_logo{
+            grid-column: 1 / 1;
+            height: 33px;
+        }
+
+        .menu_elements{
+            display: none;
+        }
+    
+        .menu_btn{
+            display: none;
+        }
+    }
+
+
+    /*Start Principal Banner*/
+
+    .banner{
+        background-color: #fff;
+        padding: 32px 0 ;
+    }
+
+    .banner_mobile{
+        display: none;
+
+    }
+
+    .banner_items{
+        max-width: 1000px;
+        display: grid;
+	    grid-template-columns: repeat(12, 1fr);
+        grid-gap: 16px;
+    }
+
+    .banner_image{
+        grid-column: 1 / 8;
+        grid-row: 1 / 3;
+
+    }
+
+    .banner_items--card{
+        width: 100%;
+    }
+
+
+    .banner_content{
+        grid-column: 8 / 13;
+
+    }
+
+    .banner_items--text{
+        grid-row: 1 / 3;
+        width: 100%;
+    }
+
+    .banner_btn{
+        grid-column: 8 / 11;
+
+    }
+
+
+    
+    .btn_primary{
+        background: #1F8CFF;
+        color: #fff;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 10px 0;
+        height: 41px;
+        width: 322px;
+    }
+
+    .btn_secondary{
+        background: #fff;
+        color: #BCBCBC;
+        border-radius: 50px;
+        border: 2px solid #BCBCBC;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 10px 0;
+        height: 41px;
+        width: 322px;
+        
+    }
+
+    .btn_icon{
+        height: 12px;
+        width: auto;
+        padding: 0 0 0 10px;    
+    }
+
+    @media (max-width: 600px) {
+
+
+        .banner{
+            background-color: #fff;
+            padding: 32px 0 ;
+        }
+
+        .banner_mobile{
+            display: block;
+            height:400px;
+            background-image: url("../content_/Mesa\ de\ trabajo\ 1-1@1x_1.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-bottom: 64px;
+
+        }
+
+        .banner_items{
+            max-width: 350px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .banner_image{
+            display: none;
+    
+        }
+    
+        .banner_items--card{
+            width: 100%;
+        }
+    
+    
+        .banner_content{
+            grid-column: 1 / 5;
+    
+        }
+    
+
+        .btn_primary{
+            height: 31px;
+            width: 260px;
+            font-size: 13px;
+        }
+    
+        .btn_secondary{
+            height: 31px;
+            width: 260px;
+            font-size: 13px;
+            
+        }
+
+        .btn_icon{
+            height: 9px;   
+        }
+    
+
+    }
 
 
 
- /* Start Principal Banner */
+    /*Start Benefits Banner*/
 
- .banner{
-    padding: 2rem 0;
-    background-color: #fff;
-}
+    .benefits{
+        background-color:  #FF1233;
+        padding: 64px 0;
 
-.banner_items{
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-}
+    }
+    .benefits_items{
+        max-width: 1000px;
+        display: grid;
+	    grid-template-columns: repeat(12, 1fr);
+        grid-gap: 16px;
+    }
 
-.banner_items--card{
-    width: 600px;
+    .benefits_items h3{
+        padding-bottom: 22px;
+        font-size: 20px;
+        font-weight: 900;
+    }
 
-}
+    .benefits_items p{
+        font-size: 15px;
+        font-weight: 400;
+    }
 
-.banner_items--text{
-    width: 500px;
-}
+    .benefits_item--1{
+        grid-column: 1 / 4;
+    }
 
-.banner_content{
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-}
+    .benefits_item--2{
+        grid-column: 5 / 8;
+    }
 
+    .benefits_item--3{
+        grid-column: 9 / 13;
+    }
+    
+    @media (max-width: 600px) {
+        .benefits_items{
+            max-width: 350px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            
+        }
 
-.btn_primary{
-    background: #1F8CFF;
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: 700;
-    width: 300px;
-    box-shadow: 0px 0px 10px 1px #1F8CFF;
-    margin: 10px 0;
-}
-
-.btn_secondary{
-    background: #fff;
-    color: #BCBCBC;
-    padding: 10px 30px;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: 700;
-    width: 300px;
-    margin: 10px 0;
-    border: 2px solid #BCBCBC;
-}
-
-.banner_btn{
-    padding: 0 0 0 3rem;
-}
-
-.btn_icon{
-    height: 14px;
-    width: auto;
-    padding: 0 0 0 1rem;    
-}
-
-
-
- /* End Principal Banner */
-
-
+        .benefits_items h3{
+            font-size: 25px;
+        }
+    
+        .benefits_items p{
+            font-size: 20px;
+        }
+    
+        .benefits_item--1{
+            grid-column: 1 / 5;
+            padding-bottom: 32px;
+        }
+    
+        .benefits_item--2{
+            grid-column: 1 / 5;
+            padding-bottom: 32px;
+        }
+    
+        .benefits_item--3{
+            grid-column: 1 / 5;
+        }
 
 
+    }
+  
+
+    /*Start Promo Section*/
+    .promo{
+        background-color:  #ffffff;
+        padding: 64px 0;
+
+    }
+    .promo_content{
+        max-width: 1000px;
+        display: grid;
+	    grid-template-columns: repeat(12, 1fr);
+        grid-gap: 16px;
+    }
+
+    .promo_items{
+        grid-column: 2 / 6;
+    }
+
+    .promo_items h2 {
+        font-size: 40px;
+        color: #FF1233;
+        font-weight: 900;
+    }
+
+    .promo_items-item{
+        display: flex;
+        padding-top: 32px;
+    }
+
+   
+
+    .promo_icon{
+        grid-column: 2 / 3;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 0px 10px 1px #D9D9D9;
+        border-radius: 20px;
+        width: 80px;
+        height: 80px;
+        background-color: #ffffff;
+    }
+
+    .promo_icon--img{
+        padding: 17px;
+    }
+    
+
+    .promo_item--txt{
+        grid-column: 4 / 6;
+        padding-left: 16px;
+
+    }
+
+    .promo_item--txt h3 {
+        font-size:20px;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: #FF1233;
+        padding-bottom: 16px;
+    }
+
+    .promo_item--txt p {
+        font-size:15px;
+        color: #707070;
+    }
+
+    .promo_img{
+        grid-column: 7 / 12;
+        display: flex;
+        align-items: center;
+    }
+
+   .promo_image--img{
+       width: 494px;
+       
+   }
+
+   @media (max-width: 600px) {
+
+        .promo_content{
+        max-width: 350px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        }
+
+        .promo_items{
+            grid-column: 1 / 5;
+            order: 2;
+        }
+
+        .promo_img{
+            grid-column: 1 / 5;
+            order: 1;
+            padding-bottom: 32px;
+        }
+
+        .promo_image--img{
+            width: 350px;
+            
+        }
+
+        .promo_item--txt h3 {
+            font-size:25px;
+        }
+    
+        .promo_item--txt p {
+            font-size:20px;
+        }
+        
+    }
 
 
- /*  Start Benefits Banner */
-.benefits{
-    padding: 2rem 0;
-    display: flex;
-    align-items: center;
-    background-color: #FF1233;
-}
+ /*  center;
+ 
 
-.benefits_items{
-    display: flex;
-    align-items:flex-start;
-    max-width: 1200px;
-    color: #fff;
-}
-
-
-
-.benefits_item{
-    width: 25%;
-    padding: 15px;
-}
-
- /*  End Benefits Banner */
-
-
-
- /*  Start Promo Banner */
+ /*  Start Promo Banner 
 .promo{
     max-width: 1200px;
     display: flex;
@@ -253,12 +475,9 @@ h3{
     padding: 17px;
 }
 
-.promo_img{
-    display: flex;
-    align-items: center;
-    width: 478px;
-    height: auto;
-    transform: rotate(-15deg);
+
+.promo_img--img{
+    width: 800px;
 }
 
 .promo_item--txt{
@@ -270,7 +489,7 @@ h3{
 
 
 
- /*  Start Steps Banner */
+ /*  Start Steps Banner 
 
 .steps{
     background-color: #FF1233;
